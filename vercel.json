@@ -1,8 +1,9 @@
 {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "https://github.com/alexmarqs/spotify-now-playing-svg"
-    }
+  "version": 2,
+  "builds": [
+    { "src": "api/index.ts", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.ts" }
   ]
 }
